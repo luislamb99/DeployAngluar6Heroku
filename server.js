@@ -3,7 +3,7 @@ const  express =  required('express'),
 
 const app = express();
 
-app.use(express.static('./dist/myapp'));
+app.use(express.static('/dist/myapp'));
 
 app.get('/*', (req, res) => {
   res.sendFile( path.join(__dirname, '/dist/myapp/index.html') );
